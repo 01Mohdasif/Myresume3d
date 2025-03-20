@@ -26,7 +26,6 @@ const ServiceCard = ({ index, title, icon }) => (
           alt='web-development'
           className='w-16 h-16 object-contain'
         />
-
         <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
         </h3>
@@ -47,11 +46,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I'm a Software Engineer with hands-on experience in React, Node.js, SQL, Next.js, Data Analytics, and Python. 
+        I have worked on projects like Employee Management System (EHRP Web) for GUAM Government, a Hospital Management Website, 
+        and an E-Commerce Website using Next.js.  
+
+        With a strong foundation in Git, REST API integration, and a passion for Data Science, I am continuously upgrading my 
+        skills to build scalable and efficient solutions.  
+
+        Let's collaborate and bring innovative ideas to life!
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>

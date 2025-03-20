@@ -29,7 +29,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import dataScience from "./dataScience.jpg";
+import python from "./python.jpg";
+import nextjs from "./Nextjs.jpeg";
+import sql from "./sql.jpg";
 export {
   logo,
   backend,
@@ -59,4 +62,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  dataScience,
+  python,
+  nextjs,
+  sql,
 };
