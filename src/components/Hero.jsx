@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import { profile } from "../constants";
 import { FaGithub, FaLinkedin } from "react-icons/fa"; // Import icons
 // import { ComputersCanvas } from "./canvas";
 
@@ -19,24 +20,27 @@ const Hero = () => {
             Hi, I'm <span className='text-[#915EFF]'>Mohd Asif</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Dedicated Software Engineer skilled in React, Next.js, Node.js, SQL, and Data Analytics. <br className='sm:block hidden' />
-            Passionate about continuous learning and innovation in technology.
+            Software Engineer &amp; Team Lead with 5+ years building <br className='sm:block hidden' />
+            enterprise SaaS, ERP, healthcare and government platforms.
+          </p>
+          <p className='mt-3 text-secondary sm:text-[18px] text-[14px] max-w-2xl'>
+            React · Next.js · TypeScript · Electron · Redux · FastAPI
           </p>
 
           {/* Social Icons & Download CV */}
           <div className="flex items-center gap-5 mt-4">
             {/* GitHub */}
-            <a href="https://github.com/your-github" target="_blank" rel="noopener noreferrer">
-              <FaGithub className="text-white text-[30px] hover:text-[#915EFF] transition duration-300" />
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">
+              <FaGithub aria-label="GitHub" className="text-white text-[30px] hover:text-[#915EFF] transition duration-300" />
             </a>
 
             {/* LinkedIn */}
-            <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="text-white text-[30px] hover:text-[#915EFF] transition duration-300" />
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+              <FaLinkedin aria-label="LinkedIn" className="text-white text-[30px] hover:text-[#915EFF] transition duration-300" />
             </a>
 
             {/* Download CV Button */}
-            <a href="/MohdAsifResume.pdf" download>
+            <a href={`${import.meta.env.BASE_URL}MohdAsifResume.pdf`} download>
               <button className="px-4 py-2 text-white bg-[#915EFF] hover:bg-[#7740E0] transition rounded-lg">
                 Download CV
               </button>

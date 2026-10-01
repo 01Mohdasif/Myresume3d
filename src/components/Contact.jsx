@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { profile } from "../constants";
 
 const Contact = () => {
   const formRef = useRef();
@@ -37,9 +38,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: profile.name,
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: profile.email,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -74,6 +75,22 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className='mt-4 text-secondary text-[16px]'>
+          Open to senior engineering and team-lead roles. Write to{" "}
+          <a className='text-[#915EFF]' href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>{" "}
+          or find me on{" "}
+          <a
+            className='text-[#915EFF]'
+            href={profile.linkedin}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            LinkedIn
+          </a>
+          .
+        </p>
 
         <form
           ref={formRef}

@@ -3,7 +3,7 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
+import { services, stats } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -46,15 +46,26 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a Software Engineer with hands-on experience in React, Node.js, SQL, Next.js, Data Analytics, and Python. 
-        I have worked on projects like Employee Management System (EHRP Web) for GUAM Government, a Hospital Management Website, 
-        and an E-Commerce Website using Next.js.  
-
-        With a strong foundation in Git, REST API integration, and a passion for Data Science, I am continuously upgrading my 
-        skills to build scalable and efficient solutions.  
-
-        Let's collaborate and bring innovative ideas to life!
+        I'm a Software Engineer and Team Lead with 5+ years of experience
+        shipping enterprise-grade web and desktop applications. I design
+        multi-tenant SaaS ERP, CRM, POS, e-commerce, government HRMS and
+        healthcare platforms, with secure REST integrations, role-based access
+        control, real-time features and offline-first data using IndexedDB.
+        <br />
+        <br />
+        I care about scalable architecture, reusable components and
+        production-ready code that solves real business problems, and I enjoy
+        leading and mentoring teams to deliver it on time.
       </motion.p>
+
+      <div className='mt-10 grid grid-cols-2 md:grid-cols-4 gap-5 max-w-3xl'>
+        {stats.map((stat) => (
+          <div key={stat.label} className='bg-tertiary rounded-2xl p-5'>
+            <p className='text-white font-black text-[32px]'>{stat.value}</p>
+            <p className='text-secondary text-[13px] mt-1'>{stat.label}</p>
+          </div>
+        ))}
+      </div>
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
