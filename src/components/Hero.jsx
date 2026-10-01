@@ -27,8 +27,33 @@ const Hero = () => {
             React · Next.js · TypeScript · Electron · Redux · FastAPI
           </p>
 
+          <div className='mt-6 flex flex-wrap gap-3'>
+            {["Team Lead", "5 live platforms", "Multi-tenant SaaS", "Gov-grade RBAC", "Offline-first apps"].map(
+              (chip) => (
+                <span
+                  key={chip}
+                  className='text-[13px] text-white-100 border border-[#915EFF]/50 bg-[#915EFF]/10 rounded-full px-4 py-1'
+                >
+                  {chip}
+                </span>
+              )
+            )}
+          </div>
+
           {/* Social Icons & Download CV */}
-          <div className="flex items-center gap-5 mt-4">
+          <div className="flex flex-wrap items-center gap-5 mt-6">
+            <a
+              href='#projects'
+              className='px-5 py-2 text-white bg-[#915EFF] hover:bg-[#7740E0] transition rounded-lg font-semibold'
+            >
+              View Projects
+            </a>
+            <a
+              href='#contact'
+              className='px-5 py-2 text-white border border-[#915EFF] hover:bg-[#915EFF]/20 transition rounded-lg font-semibold'
+            >
+              Hire Me
+            </a>
             {/* GitHub */}
             <a href={profile.github} target="_blank" rel="noopener noreferrer">
               <FaGithub aria-label="GitHub" className="text-white text-[30px] hover:text-[#915EFF] transition duration-300" />
@@ -41,7 +66,7 @@ const Hero = () => {
 
             {/* Download CV Button */}
             <a href={`${import.meta.env.BASE_URL}MohdAsifResume.pdf`} download>
-              <button className="px-4 py-2 text-white bg-[#915EFF] hover:bg-[#7740E0] transition rounded-lg">
+              <button className="px-4 py-2 text-white border border-white/30 hover:border-[#915EFF] transition rounded-lg">
                 Download CV
               </button>
             </a>

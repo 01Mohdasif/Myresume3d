@@ -26,10 +26,16 @@ export const profile = {
   location: "Noida, India",
 };
 
+const initialsIcon = (text, from, to) =>
+  `data:image/svg+xml;utf8,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${from}"/><stop offset="1" stop-color="${to}"/></linearGradient></defs><rect width="120" height="120" rx="60" fill="url(#g)"/><text x="60" y="73" font-family="Poppins,Arial,sans-serif" font-weight="800" font-size="40" text-anchor="middle" fill="#fff">${text}</text></svg>`
+  )}`;
+
 export const navLinks = [
   { id: "about", title: "About" },
   { id: "work", title: "Experience" },
   { id: "projects", title: "Projects" },
+  { id: "awards", title: "Awards" },
   { id: "contact", title: "Contact" },
 ];
 
@@ -65,24 +71,50 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Software Engineer & Team Lead",
+    title: "Senior Software Engineer / Team Lead",
     company_name: "Apexpath Pvt Ltd · Sonipat",
-    icon: web,
-    iconBg: "#383E56",
-    date: "Mar 2023 - Present",
+    icon: initialsIcon("AP", "#7c3aed", "#2563eb"),
+    iconBg: "#232631",
+    date: "Nov 2025 - Present",
+    badge: "Current",
     points: [
-      "Lead and mentor a team delivering enterprise apps, including the EHRP HR & Payroll system for the GUAM Government (React, Redux, Swagger APIs).",
-      "Architect multi-tenant SaaS ERP, hospital, lab and e-commerce platforms with Next.js, Electron.js and role-based access control.",
-      "Built POS workflows with QR/barcode scanning, thermal-printer receipts and IndexedDB offline storage for reliable desktop use.",
-      "Own code reviews, reusable component architecture, REST/FastAPI integration and performance tuning.",
-      "Recognised with the Founding Commitment Award (2026).",
+      "Lead the SidhaHisab team: owning architecture, delivery planning and technical direction of the multi-tenant SaaS ERP (System Admin Panel, Enterprise CRM, Invoice Template Designer, Multi-Store management).",
+      "Lead ReqTrack end to end (architecture, UX, implementation), cutting project setup time by 60%; built LabSync, a pathology-lab LIMS.",
+      "Built POS workflows with QR/barcode scanning, thermal-printer receipts and IndexedDB offline storage on Electron.js.",
+      "Mentor engineers, run code reviews and drive scalable, secure releases.",
+      "Recognised with the Founding Commitment Award (Jul 2026).",
+    ],
+  },
+  {
+    title: "Software Engineer",
+    company_name: "Apexpath Pvt Ltd · Sonipat",
+    icon: initialsIcon("AP", "#7c3aed", "#2563eb"),
+    iconBg: "#232631",
+    date: "Nov 2023 - Nov 2025",
+    badge: "Promoted",
+    points: [
+      "Built the HealthBridge hospital platform frontend: doctor and patient portals, appointments, PDF slips and video consultation.",
+      "Delivered EHRP modules for Admins, Directors and Certifying Officers with department-level access control.",
+      "Worked on REST/FastAPI integration, state management and reusable component architecture.",
+    ],
+  },
+  {
+    title: "Junior Software Engineer",
+    company_name: "Apexpath Pvt Ltd · Sonipat",
+    icon: initialsIcon("AP", "#7c3aed", "#2563eb"),
+    iconBg: "#232631",
+    date: "Mar 2023 - Nov 2023",
+    badge: "Joined",
+    points: [
+      "Started on EHRP Web with React, Redux and Swagger APIs: employee records, forms and validations.",
+      "Learned the production workflow of Git, code review and API testing with Postman and Swagger.",
     ],
   },
   {
     title: "Front End Developer",
     company_name: "Appsums Pvt Ltd · Noida",
-    icon: reactjs,
-    iconBg: "#E6DEDD",
+    icon: initialsIcon("AS", "#db2777", "#7c3aed"),
+    iconBg: "#232631",
     date: "Apr 2022 - Apr 2023",
     points: [
       "Built responsive React UIs for Turegu, an e-commerce platform on React, Node.js, MongoDB and Firebase.",
@@ -93,8 +125,8 @@ const experiences = [
   {
     title: "Web Developer & Support Engineer (Team Lead)",
     company_name: "Virtual Studio Pvt. Ltd · Noida",
-    icon: backend,
-    iconBg: "#383E56",
+    icon: initialsIcon("VS", "#0f766e", "#1d4ed8"),
+    iconBg: "#232631",
     date: "Aug 2018 - Dec 2021",
     points: [
       "Led Adobe Connect support for Novartis: webinars, virtual training and live troubleshooting.",

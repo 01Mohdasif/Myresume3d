@@ -30,9 +30,9 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import dataScience from "./dataScience.jpg";
-import python from "./python.jpg";
+import python from "./tech/py.svg";
 import nextjs from "./Nextjs.jpeg";
-import sql from "./sql.jpg";
+import sql from "./tech/sql.svg";
 export {
   logo,
   backend,

@@ -14,7 +14,7 @@ const Awards = () => {
         <h2 className={styles.sectionHeadText}>Awards.</h2>
       </motion.div>
 
-      <div className='mt-12 flex flex-wrap gap-7'>
+      <div className='mt-12 flex flex-wrap items-stretch gap-7'>
         {awards.map((award, index) => (
           <motion.div
             key={award.title}
@@ -38,13 +38,15 @@ const Awards = () => {
           <motion.div
             key={edu.school}
             variants={fadeIn("up", "spring", (index + 1) * 0.3, 0.75)}
-            className='bg-black-200 rounded-[20px] p-8 sm:w-[360px] w-full'
+            className='green-pink-gradient p-[1px] rounded-[20px] sm:w-[360px] w-full'
           >
-            <p className='text-secondary text-[14px]'>{edu.period}</p>
-            <h3 className='text-white font-bold text-[24px] mt-1'>
-              🎓 {edu.school}
-            </h3>
-            <p className='text-secondary mt-1'>{edu.degree}</p>
+            <div className='bg-tertiary rounded-[20px] p-8 h-full'>
+              <p className='text-secondary text-[14px]'>{edu.period}</p>
+              <h3 className='text-white font-bold text-[24px] mt-1'>
+                🎓 {edu.school}
+              </h3>
+              <p className='text-[#915EFF] font-semibold mt-1'>{edu.degree}</p>
+            </div>
           </motion.div>
         ))}
       </div>
@@ -52,4 +54,4 @@ const Awards = () => {
   );
 };
 
-export default SectionWrapper(Awards, "");
+export default SectionWrapper(Awards, "awards");

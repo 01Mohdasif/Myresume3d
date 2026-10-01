@@ -19,10 +19,13 @@ const ProjectCard = ({
   note,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.3, 0.75)}
+      className='flex sm:w-[360px] w-full'
+    >
       <Tilt
         options={{ max: 20, scale: 1, speed: 450 }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full flex flex-col'
+        className='bg-tertiary p-5 rounded-2xl w-full flex flex-col'
       >
         <div
           className={`relative w-full h-[150px] rounded-2xl bg-gradient-to-br ${gradient} flex flex-col justify-end p-4`}
@@ -51,16 +54,18 @@ const ProjectCard = ({
           ))}
         </div>
 
-        <div className='mt-5 flex items-center justify-between gap-3'>
+        <div className='mt-5 flex flex-col items-start gap-2'>
           <a
             href={live_link}
             target='_blank'
             rel='noopener noreferrer'
-            className='bg-[#915EFF] hover:bg-[#7740E0] transition text-white text-[14px] font-semibold rounded-lg px-4 py-2'
+            className='bg-[#915EFF] hover:bg-[#7740E0] transition text-white text-[14px] font-semibold rounded-lg px-4 py-2 whitespace-nowrap'
           >
             View Live ↗
           </a>
-          {note && <span className='text-secondary text-[12px]'>{note}</span>}
+          <span className='text-secondary text-[12px] min-h-[16px]'>
+            {note || ""}
+          </span>
         </div>
       </Tilt>
     </motion.div>

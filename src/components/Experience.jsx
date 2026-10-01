@@ -18,6 +18,7 @@ const ExperienceCard = ({ experience }) => {
       contentStyle={{
         background: "#1d1836",
         color: "#fff",
+        borderTop: experience.badge === "Current" ? "3px solid #915EFF" : "none",
       }}
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
@@ -33,6 +34,17 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
+        {experience.badge && (
+          <span
+            className={`inline-block mb-2 text-[11px] font-semibold uppercase tracking-wider rounded-full px-3 py-1 ${
+              experience.badge === "Current"
+                ? "bg-[#915EFF] text-white"
+                : "border border-[#915EFF]/60 text-[#c9b3ff]"
+            }`}
+          >
+            {experience.badge === "Promoted" ? "↑ Promoted" : experience.badge === "Current" ? "↑ Promoted · Current" : experience.badge}
+          </span>
+        )}
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
           className='text-secondary text-[16px] font-semibold'
