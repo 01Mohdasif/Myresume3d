@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/Myresume3d/", // Repo name likho
+  base: process.env.VERCEL ? "/" : "/Myresume3d/", // Vercel: root, GitHub Pages: repo name
   plugins: [react()],
 });
 
